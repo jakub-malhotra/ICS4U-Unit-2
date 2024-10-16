@@ -7,7 +7,7 @@
 
 public class Main {
     /**
-     * This program utilizes the MrCoxallStack
+     * This program utilizes the MrCoxallStack.
      *
      * @param args command line arguments
      */
@@ -18,7 +18,7 @@ public class Main {
         fruitStack.push("banana");
         fruitStack.push("cherry");
         // Print the fruit stack using String.format()
-        System.out.println(String.format("Fruit items: %s", 
+        System.out.println(String.format("Fruit items: %s",
                 fruitStack.showStack()));
         System.out.println();
 
@@ -27,7 +27,7 @@ public class Main {
         colorStack.push("green");
         colorStack.push("blue");
         // Print the color stack using String.format()
-        System.out.println(String.format("Color items: %s", 
+        System.out.println(String.format("Color items: %s",
                 colorStack.showStack()));
         System.out.println();
 
@@ -36,7 +36,7 @@ public class Main {
         dogStack.push("retriever");
         dogStack.push("beagle");
         // Print the dog stack using String.format()
-        System.out.println(String.format("Dog items: %s", 
+        System.out.println(String.format("Dog items: %s",
                 dogStack.showStack()));
         System.out.println();
 
