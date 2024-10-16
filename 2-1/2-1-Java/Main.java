@@ -19,7 +19,7 @@ public class Main {
         fruitStack.push("cherry");
         // Print the fruit stack using String.format()
         System.out.println(String.format("Fruit items: %s", fruitStack.showStack()));
-        System.out.println()
+        System.out.println();
 
         MrCoxallStack colorStack = new MrCoxallStack();
         colorStack.push("red");
@@ -27,7 +27,7 @@ public class Main {
         colorStack.push("blue");
         // Print the color stack using String.format()
         System.out.println(String.format("Color items: %s", colorStack.showStack()));
-        System.out.println()
+        System.out.println();
 
         MrCoxallStack dogStack = new MrCoxallStack();
         dogStack.push("poodle");
@@ -35,7 +35,7 @@ public class Main {
         dogStack.push("beagle");
         // Print the dog stack using String.format()
         System.out.println(String.format("Dog items: %s", dogStack.showStack()));
-        System.out.println()
+        System.out.println();
 
         System.out.println("\nDone.");
     }
