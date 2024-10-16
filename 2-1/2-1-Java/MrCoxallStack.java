@@ -30,9 +30,9 @@ public class MrCoxallStack {
     /**
      * Pushes the specified string onto the top of the stack.
      *
-     * @param pushedString using pushedString
+     * @param pushedString the string to be pushed onto the stack
      */
-    public void push(String pushedString) {
+    public void push(final String pushedString) {
         // Push the value onto the stack
         this.stackAsList.add(pushedString);
     }
@@ -40,7 +40,7 @@ public class MrCoxallStack {
     /**
      * Returns a string representation of the stack.
      *
-     * @return stackValues
+     * @return the string representation of the stack
      */
     public String showStack() {
         // Return the stack
