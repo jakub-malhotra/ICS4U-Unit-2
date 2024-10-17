@@ -15,17 +15,9 @@ public class MrCoxallStack {
 
     /**
      * Represents a stack data structure implemented using a List.
-     * This list stores elements as strings.
+     * This list stores elements as strings and is public.
      */
-    private List<String> stackAsList;
-
-    /**
-     * Constructs a new instance of MrCoxallStack.
-     * Initializes the stack with an empty ArrayList.
-     */
-    public MrCoxallStack() {
-        this.stackAsList = new ArrayList<>();
-    }
+    public List<String> stackAsList = new ArrayList<>();
 
     /**
      * Pushes the specified string onto the top of the stack.
