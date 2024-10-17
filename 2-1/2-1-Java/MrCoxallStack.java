@@ -32,7 +32,7 @@ public class MrCoxallStack {
      *
      * @param pushedString the string to be pushed onto the stack
      */
-    public void push(final String pushedString) {
+    public void pushItem(final String pushedString) {
         // Push the value onto the stack
         this.stackAsList.add(pushedString);
     }

@@ -12,7 +12,7 @@ class MrCoxallStack {
         this.stackAsList = []
     }
 
-    push(pushedString: string): void {
+    pushItem(pushedString: string): void {
         // push the value onto the stack
         this.stackAsList.push(pushedString)
     }
