@@ -30,7 +30,7 @@ public final class MrCoxallStack {
     /**
      * Returns a string representation of the stack as a comma-separated list.
      *
-     * @return a string containing the elements of the stack, 
+     * @return a string containing the elements of the stack,
      *         or an empty string if the stack is empty
      */
     public String getShowStack() {
@@ -60,7 +60,7 @@ public final class MrCoxallStack {
     /**
      * Pops a string from the top of the stack.
      *
-     * @return the popped string if the stack is not empty, 
+     * @return the popped string if the stack is not empty,
      *         or a message indicating that the stack is empty
      */
     public String popItem() {
