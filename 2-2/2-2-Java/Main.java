@@ -5,7 +5,7 @@
  * @since   2024-10-17
  */
 
-public class Main {
+public final class Main {
 
     // Private constructor to prevent instantiation of utility class
     private Main() {
