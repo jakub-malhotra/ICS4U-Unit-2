@@ -15,27 +15,29 @@ export default class MrCoxallStack {
     }
 
     /**
-     * Push a string onto the stack.
-     * @param {string} pushedString - The string to be pushed onto the stack.
-     */
-    pushItem(pushedString: string): void {
-        this.stackAsList.push(pushedString)
-    }
-
-    /**
-     * Return the current stack as a string with comma-separated values.
+     * Getter to return the current stack as a string with comma-separated values.
      * @returns {string} The stack as a string.
      */
-    showStack(): string {
+    get showStack(): string {
         let stackValues: string = ""
 
         for (const value of this.stackAsList) {
             stackValues += value + ", "
         }
-        // Remove the trailing comma and space
-        stackValues = stackValues.slice(0, -2)
+        // Remove the trailing comma and space if the stack is not empty
+        if (stackValues.length > 0) {
+            stackValues = stackValues.slice(0, -2)
+        }
 
         return stackValues
+    }
+
+    /**
+     * Push a string onto the stack.
+     * @param {string} pushedString - The string to be pushed onto the stack.
+     */
+    pushItem(pushedString: string): void {
+        this.stackAsList.push(pushedString)
     }
 
     /**
