@@ -1,17 +1,17 @@
 /**
  * Class representing a stack for storing strings.
  * @author  Jakub Malhotra
- * @version 2.0 
- * @since   2024-10-17
+ * @version 2.1 
+ * @since   2024-10-21
  */
 export default class MrCoxallStack {
-    private stackAsList: string[]
+    private stackAsList: string[];
 
     /**
      * Create a new stack.
      */
     constructor() {
-        this.stackAsList = []
+        this.stackAsList = [];
     }
 
     /**
@@ -19,17 +19,32 @@ export default class MrCoxallStack {
      * @returns {string} The stack as a string.
      */
     get showStack(): string {
-        let stackValues: string = ""
-
-        for (const value of this.stackAsList) {
-            stackValues += value + ", "
+        if (this.isEmpty) {
+            return "The stack is empty!";
         }
-        // Remove the trailing comma and space if the stack is not empty
-        if (stackValues.length > 0) {
-            stackValues = stackValues.slice(0, -2)
-        }
+        
+        return this.stackAsList.join(", ");
+    }
 
-        return stackValues
+    /**
+     * Getter to check if the stack is empty.
+     * @returns {boolean} True if the stack is empty, false otherwise.
+     */
+    isEmpty(): boolean {
+        if (this.stackAsList.length === 0) {
+            // Stack is empty
+            return true
+        }
+        // Stack is not empty
+        return false;
+    }    
+
+    /**
+     * Getter to get the size of the stack.
+     * @returns {number} The number of elements in the stack.
+     */
+    get size(): number {
+        return this.stackAsList.length;
     }
 
     /**
@@ -37,7 +52,7 @@ export default class MrCoxallStack {
      * @param {string} pushedString - The string to be pushed onto the stack.
      */
     pushItem(pushedString: string): void {
-        this.stackAsList.push(pushedString)
+        this.stackAsList.push(pushedString);
     }
 
     /**
@@ -45,14 +60,18 @@ export default class MrCoxallStack {
      * @returns {string} The popped string, or a message if the stack is empty.
      */
     popItem(): string {
-        let returnValue = ""
-
-        if (this.stackAsList.length > 0) {
-            returnValue = this.stackAsList.pop()!
-        } else {
-            returnValue = "The stack is empty!"
+        if (this.isEmpty) {
+            return "The stack is empty!";
         }
-
-        return returnValue
+        
+        const poppedValue = this.stackAsList.pop();
+        
+        // Handle the case where poppedValue might be undefined
+        if (poppedValue === undefined) {
+            return "The stack is empty!";
+        }
+        
+        return poppedValue;
     }
+    
 }
