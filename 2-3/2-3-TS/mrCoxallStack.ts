@@ -5,6 +5,11 @@
  * @since   2024-10-21
  */
 export default class MrCoxallStack {
+    /**
+     * An array to store the elements of the stack.
+     * 
+     * @type {string[]}
+     */
     private stackAsList: string[];
 
     /**
