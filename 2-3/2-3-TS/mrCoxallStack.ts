@@ -30,13 +30,8 @@ export default class MrCoxallStack {
      * Getter to check if the stack is empty.
      * @returns {boolean} True if the stack is empty, false otherwise.
      */
-    isEmpty(): boolean {
-        if (this.stackAsList.length === 0) {
-            // Stack is empty
-            return true
-        }
-        // Stack is not empty
-        return false;
+    get isEmpty(): boolean {
+        return this.stackAsList.length === 0;
     }    
 
     /**
@@ -73,5 +68,4 @@ export default class MrCoxallStack {
         
         return poppedValue;
     }
-    
 }
