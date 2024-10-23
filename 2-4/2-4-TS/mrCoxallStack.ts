@@ -73,4 +73,31 @@ export default class MrCoxallStack {
         
         return poppedValue;
     }
+
+    /**
+     * Peek at the top string of the stack.
+     * @returns {string} The top string, or a message if the stack is empty.
+     */
+    peekItem(): string {
+        if (this.isEmpty) {
+            return "The stack is empty!";
+        }
+
+        const topValue = this.stackAsList[this.stackAsList.length - 1];
+        
+        // Handle the case where topValue might be undefined
+        if (topValue === undefined) {
+            return "The stack is empty!";
+        }
+
+        return topValue;
+    }
+
+    /**
+     * Clear the entire stack.
+     * Removes all items from the stack.
+     */
+    clearStack(): void {
+        this.stackAsList = [];
+    }
 }
