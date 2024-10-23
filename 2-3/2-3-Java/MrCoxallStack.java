@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class provides methods to push, pop, and display the stack, 
+ * This class provides methods to push, pop, and display the stack,
  * and methods for size and emptiness.
  */
 public final class MrCoxallStack {

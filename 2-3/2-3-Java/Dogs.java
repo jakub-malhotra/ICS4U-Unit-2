@@ -13,7 +13,7 @@ public final class Dogs {
     }
 
     /**
-     * The main method that demonstrates the use of MrCoxallStack for dog items.
+     * The main method that uses MrCoxallStack for dog items.
      *
      * @param args command line arguments
      */

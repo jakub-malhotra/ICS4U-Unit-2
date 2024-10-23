@@ -13,7 +13,7 @@ public final class Fruits {
     }
 
     /**
-     * The main method that demonstrates the use of MrCoxallStack for fruit items.
+     * The main method uses MrCoxallStack for fruit items.
      *
      * @param args command line arguments
      */

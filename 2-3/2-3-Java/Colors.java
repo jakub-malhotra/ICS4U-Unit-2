@@ -13,7 +13,7 @@ public final class Colors {
     }
 
     /**
-     * The main method that demonstrates the use of MrCoxallStack for color items.
+     * The main method that uses MrCoxallStack for color items.
      *
      * @param args command line arguments
      */
