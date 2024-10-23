@@ -1,16 +1,16 @@
 /*
  * This is a program that implements a stack for storing strings.
  * @author  Jakub Malhotra
- * @version 2.0
- * @since   2024-10-17
+ * @version 3.0
+ * @since   2024-10-21
  */
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class represents a stack data structure for strings.
- * It provides methods to push, pop, and display the stack.
+ * This class provides methods to push, pop, and display the stack, 
+ * and methods for size and emptiness.
  */
 public final class MrCoxallStack {
 
@@ -28,12 +28,16 @@ public final class MrCoxallStack {
     }
 
     /**
-     * Returns a string representation of the stack as a comma-separated list.
+     * Returns a string of the stack as a list.
      *
      * @return a string containing the elements of the stack,
-     *         or an empty string if the stack is empty
+     *         or a message indicating that the stack is empty
      */
     public String getShowStack() {
+        if (this.isEmpty()) {
+            return "The stack is empty!";
+        }
+
         final StringBuilder stackValues = new StringBuilder();
 
         for (String value : this.stackAsList) {
@@ -46,6 +50,24 @@ public final class MrCoxallStack {
         }
 
         return stackValues.toString();
+    }
+
+    /**
+     * Checks if the stack is empty.
+     *
+     * @return true if the stack is empty, false otherwise
+     */
+    public boolean isEmpty() {
+        return this.stackAsList.isEmpty();
+    }
+
+    /**
+     * Returns the number of elements in the stack.
+     *
+     * @return the size of the stack
+     */
+    public int getSize() {
+        return this.stackAsList.size();
     }
 
     /**
@@ -64,7 +86,7 @@ public final class MrCoxallStack {
      *         or a message indicating that the stack is empty
      */
     public String popItem() {
-        if (this.stackAsList.isEmpty()) {
+        if (this.isEmpty()) {
             return "The stack is empty!";
         } else {
             return this.stackAsList.remove(this.stackAsList.size() - 1);
