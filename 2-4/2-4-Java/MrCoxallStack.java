@@ -114,7 +114,7 @@ public final class MrCoxallStack {
         }
     }
 
-        /**
+     /**
      * Clear the entire stack.
      * Removes all items from the stack.
      */

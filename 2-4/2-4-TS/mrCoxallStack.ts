@@ -47,7 +47,7 @@ export default class MrCoxallStack {
         return this.stackAsList.length;
     }
 
-        /**
+     /**
      * Peek at the top string of the stack.
      * @returns {string} The top string, or a message if the stack is empty.
      */
