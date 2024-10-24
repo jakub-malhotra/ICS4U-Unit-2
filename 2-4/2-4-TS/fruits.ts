@@ -30,7 +30,7 @@ console.log(`The top fruit is: ${fruitStack.peekItem}`)
 console.log(`The size of the stack is: ${fruitStack.size}`)
 // empty the stack and show it
 console.log(`Emptying the stack ...`)
-fruitStack.clearStack
+fruitStack.clearStack()
 console.log(`The size of the stack is: ${fruitStack.size}`)
 console.log(`Is the stack empty? ${fruitStack.isEmpty}`)
 

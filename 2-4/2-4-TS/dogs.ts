@@ -30,7 +30,7 @@ console.log(`The top dog is: ${dogStack.peekItem}`)
 console.log(`The size of the stack is: ${dogStack.size}`)
 // empty the stack and show it
 console.log(`Emptying the stack ...`)
-dogStack.clearStack
+dogStack.clearStack()
 console.log(`The size of the stack is: ${dogStack.size}`)
 console.log(`Is the stack empty? ${dogStack.isEmpty}`)
 
