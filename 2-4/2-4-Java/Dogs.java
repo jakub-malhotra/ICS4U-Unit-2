@@ -1,7 +1,7 @@
 /*
  * This is a program that uses MrCoxallStack class for dog items.
  * @author  Jakub Malhotra
- * @version 1.0
+ * @version 3.0 
  * @since   2024-10-21
  */
 
@@ -13,7 +13,7 @@ public final class Dogs {
     }
 
     /**
-     * The main method that uses MrCoxallStack for dog items.
+     * The main method uses MrCoxallStack for dog items.
      *
      * @param args command line arguments
      */
@@ -21,7 +21,7 @@ public final class Dogs {
         // Dog Stack
         MrCoxallStack dogStack = new MrCoxallStack();
         System.out.println("Dog items: " + dogStack.getShowStack());
-        System.out.println("The size of the stack: " + dogStack.getSize());
+        System.out.println("The size of the stack is: " + dogStack.getSize());
         System.out.println("Is the stack empty? " + dogStack.isEmpty());
 
         // Push items
@@ -38,7 +38,17 @@ public final class Dogs {
 
         // Display stack after popping item
         System.out.println("Dog items: " + dogStack.getShowStack());
-        System.out.println("The size of the stack: " + dogStack.getSize());
+        System.out.println("The size of the stack is: " + dogStack.getSize());
+        System.out.println("Is the stack empty? " + dogStack.isEmpty());
+
+        // Peek and display an item
+        System.out.println("The top dog is: " + dogStack.peekItem());
+        System.out.println("The size of the stack is: " + dogStack.getSize());
+
+        // Empty the stack and show it
+        System.out.println("Emptying the stack ...");
+        dogStack.clearStack();
+        System.out.println("The size of the stack is: " + dogStack.getSize());
         System.out.println("Is the stack empty? " + dogStack.isEmpty());
 
         System.out.println("\nDone.");

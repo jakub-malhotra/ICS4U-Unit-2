@@ -1,7 +1,7 @@
 /*
  * This is a program that uses MrCoxallStack class for fruit items.
  * @author  Jakub Malhotra
- * @version 1.0
+ * @version 3.0 
  * @since   2024-10-21
  */
 
@@ -21,12 +21,12 @@ public final class Fruits {
         // Fruit Stack
         MrCoxallStack fruitStack = new MrCoxallStack();
         System.out.println("Fruit items: " + fruitStack.getShowStack());
-        System.out.println("The size of the stack: " + fruitStack.getSize());
+        System.out.println("The size of the stack is: " + fruitStack.getSize());
         System.out.println("Is the stack empty? " + fruitStack.isEmpty());
 
         // Push items
-        fruitStack.pushItem("apple");
         fruitStack.pushItem("banana");
+        fruitStack.pushItem("apple");
         fruitStack.pushItem("cherry");
 
         // Print full stack
@@ -38,7 +38,17 @@ public final class Fruits {
 
         // Display stack after popping item
         System.out.println("Fruit items: " + fruitStack.getShowStack());
-        System.out.println("The size of the stack: " + fruitStack.getSize());
+        System.out.println("The size of the stack is: " + fruitStack.getSize());
+        System.out.println("Is the stack empty? " + fruitStack.isEmpty());
+
+        // Peek and display an item
+        System.out.println("The top fruit is: " + fruitStack.peekItem());
+        System.out.println("The size of the stack is: " + fruitStack.getSize());
+
+        // Empty the stack and show it
+        System.out.println("Emptying the stack ...");
+        fruitStack.clearStack();
+        System.out.println("The size of the stack is: " + fruitStack.getSize());
         System.out.println("Is the stack empty? " + fruitStack.isEmpty());
 
         System.out.println("\nDone.");

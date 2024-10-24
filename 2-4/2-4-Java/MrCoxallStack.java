@@ -71,6 +71,27 @@ public final class MrCoxallStack {
     }
 
     /**
+     * Peek at the top string of the stack.
+     *
+     * @return The top string, or a message if the stack is empty.
+     */
+    public String peekItem() {
+        if (this.isEmpty()) {
+            return "The stack is empty!";
+        }
+
+        // Peek at the last item without removing it
+        String topValue = this.stackAsList.get(this.stackAsList.size() - 1);
+
+        // Null check using an if statement
+        if (topValue == null) {
+            return "The stack is empty!";
+        }
+
+        return topValue;
+    }
+
+    /**
      * Pushes a string onto the top of the stack.
      *
      * @param pushedString the string to be pushed onto the stack
@@ -91,5 +112,13 @@ public final class MrCoxallStack {
         } else {
             return this.stackAsList.remove(this.stackAsList.size() - 1);
         }
+    }
+
+        /**
+     * Clear the entire stack.
+     * Removes all items from the stack.
+     */
+    public void clearStack() {
+        this.stackAsList.clear();
     }
 }

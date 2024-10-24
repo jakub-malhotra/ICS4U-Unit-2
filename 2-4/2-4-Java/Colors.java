@@ -1,7 +1,7 @@
 /*
  * This is a program that uses MrCoxallStack class for color items.
  * @author  Jakub Malhotra
- * @version 1.0
+ * @version 3.0 
  * @since   2024-10-21
  */
 
@@ -13,7 +13,7 @@ public final class Colors {
     }
 
     /**
-     * The main method that uses MrCoxallStack for color items.
+     * The main method uses MrCoxallStack for color items.
      *
      * @param args command line arguments
      */
@@ -21,7 +21,7 @@ public final class Colors {
         // Color Stack
         MrCoxallStack colorStack = new MrCoxallStack();
         System.out.println("Color items: " + colorStack.getShowStack());
-        System.out.println("The size of the stack: " + colorStack.getSize());
+        System.out.println("The size of the stack is: " + colorStack.getSize());
         System.out.println("Is the stack empty? " + colorStack.isEmpty());
 
         // Push items
@@ -38,7 +38,17 @@ public final class Colors {
 
         // Display stack after popping item
         System.out.println("Color items: " + colorStack.getShowStack());
-        System.out.println("The size of the stack: " + colorStack.getSize());
+        System.out.println("The size of the stack is: " + colorStack.getSize());
+        System.out.println("Is the stack empty? " + colorStack.isEmpty());
+
+        // Peek and display an item
+        System.out.println("The top color is: " + colorStack.peekItem());
+        System.out.println("The size of the stack is: " + colorStack.getSize());
+
+        // Empty the stack and show it
+        System.out.println("Emptying the stack ...");
+        colorStack.clearStack();
+        System.out.println("The size of the stack is: " + colorStack.getSize());
         System.out.println("Is the stack empty? " + colorStack.isEmpty());
 
         System.out.println("\nDone.");
