@@ -47,6 +47,25 @@ export default class MrCoxallStack {
         return this.stackAsList.length;
     }
 
+        /**
+     * Peek at the top string of the stack.
+     * @returns {string} The top string, or a message if the stack is empty.
+     */
+        get peekItem(): string {
+            if (this.isEmpty) {
+                return "The stack is empty!";
+            }
+    
+            const topValue = this.stackAsList[this.stackAsList.length - 1];
+            
+            // Handle the case where topValue might be undefined
+            if (topValue === undefined) {
+                return "The stack is empty!";
+            }
+    
+            return topValue;
+        }
+
     /**
      * Push a string onto the stack.
      * @param {string} pushedString - The string to be pushed onto the stack.
@@ -72,25 +91,6 @@ export default class MrCoxallStack {
         }
         
         return poppedValue;
-    }
-
-    /**
-     * Peek at the top string of the stack.
-     * @returns {string} The top string, or a message if the stack is empty.
-     */
-    peekItem(): string {
-        if (this.isEmpty) {
-            return "The stack is empty!";
-        }
-
-        const topValue = this.stackAsList[this.stackAsList.length - 1];
-        
-        // Handle the case where topValue might be undefined
-        if (topValue === undefined) {
-            return "The stack is empty!";
-        }
-
-        return topValue;
     }
 
     /**
