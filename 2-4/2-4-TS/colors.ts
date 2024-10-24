@@ -25,5 +25,13 @@ console.log(`Popped color item: ${topColor}`);
 console.log(`Color items: ${colorStack.showStack}`)
 console.log(`The size of the stack is: ${colorStack.size}`)
 console.log(`Is the stack empty? ${colorStack.isEmpty}`)
+// peek and display an item
+console.log(`The top color is: ${colorStack.peekItem}`)
+console.log(`The size of the stack is: ${colorStack.size}`)
+// empty the stack and show it
+console.log(`Emptying the stack ...`)
+colorStack.clearStack
+console.log(`The size of the stack is: ${colorStack.size}`)
+console.log(`Is the stack empty? ${colorStack.isEmpty}`)
 
 console.log('\nDone.')
