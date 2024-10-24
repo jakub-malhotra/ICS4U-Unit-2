@@ -1,7 +1,7 @@
 /*
  * This is a program that uses MrCoxallStack class for dog items.
  * @author  Jakub Malhotra
- * @version 3.0 
+ * @version 3.0
  * @since   2024-10-21
  */
 
