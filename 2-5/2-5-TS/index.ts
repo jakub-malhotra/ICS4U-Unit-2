@@ -1,9 +1,9 @@
 /**
 * This is the main code that runs
  * with the Vehicle Class.
- * By:      Mr Coxall
+ * By:      Jakub Malhotra
  * Version: 1.0
- * Since:   2020-01-01
+ * Since:   2024-10-29
  */
 
 import Vehicle from './VehicleClass.ts'
@@ -35,8 +35,8 @@ console.log('Accelerating, 100 of power for 4 sec.')
 ferrari.accelerate(100, 4)
 console.log(`New speed: ${ferrari.speed}`)
 
-console.log('Breaking, 10 of power for 10 sec.')
-ferrari.break(10, 10)
+console.log('Braking, 10 of power for 10 sec.')
+ferrari.brake(10, 10)
 console.log(`New speed: ${ferrari.speed}`)
 
 console.log('Changing color:')
@@ -56,8 +56,8 @@ console.log('Accelerating, 5 of power for 10 sec.')
 citroenAmi.accelerate(5, 10)
 console.log(`New speed: ${citroenAmi.speed}`)
 
-console.log('Breaking, 2 of power for 10 sec.')
-citroenAmi.break(2, 10)
+console.log('Braking, 2 of power for 10 sec.')
+citroenAmi.brake(2, 10)
 console.log(`New speed: ${citroenAmi.speed}`)
 
 console.log('Changing color:')

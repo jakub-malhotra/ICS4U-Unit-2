@@ -1,4 +1,4 @@
-/**
+/*
  * Class representing a vehicle with basic functionality.
  * @author  Jakub Malhotra
  * @version 1.0
@@ -68,7 +68,11 @@ export default class Vehicle {
      */
     public accelerate(power: number, time: number): void {
         const speedIncrease = power * time;
-        this.currentSpeed = Math.min(this.currentSpeed + speedIncrease, this.maxSpeed);
+        if (this.currentSpeed + speedIncrease < this.maxSpeed) {
+            this.currentSpeed += speedIncrease;
+        } else {
+            this.currentSpeed = this.maxSpeed;
+        }
     }
 
     /**
@@ -76,8 +80,12 @@ export default class Vehicle {
      * @param {number} power - The power level for braking.
      * @param {number} time - The time duration for braking.
      */
-    public break(power: number, time: number): void {
+    public brake(power: number, time: number): void {
         const speedDecrease = power * time;
-        this.currentSpeed = Math.max(this.currentSpeed - speedDecrease, 0);
+        if (this.currentSpeed - speedDecrease > 0) {
+            this.currentSpeed -= speedDecrease;
+        } else {
+            this.currentSpeed = 0;
+        }
     }
 }
