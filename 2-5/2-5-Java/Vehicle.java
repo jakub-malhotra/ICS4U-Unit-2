@@ -48,7 +48,7 @@ public final class Vehicle {
      * Returns the current speed of the vehicle.
      * @return The current speed of the vehicle.
      */
-    public int getCurrentSpeed() {
+    public int getSpeed() {
         return this.currentSpeed;
     }
 
