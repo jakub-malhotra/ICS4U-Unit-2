@@ -1,16 +1,35 @@
 /**
  * Class representing a vehicle with basic functionality.
- * 
+ *
  * @author  Jakub Malhotra
  * @version 1.0
  * @since   2024-10-29
  */
 public class Vehicle {
-    private String color; // The color of the vehicle
-    private String licensePlate; // The license plate of the vehicle
-    private int numberOfDoors; // The number of doors on the vehicle
-    private int maxSpeed; // The maximum speed of the vehicle
-    private int currentSpeed; // The current speed of the vehicle
+    /**
+    * The color of the vehicle.
+     */
+    private String color;
+
+    /**
+     * The license plate of the vehicle.
+     */
+    private String licensePlate;
+
+    /**
+     * The number of doors on the vehicle.
+     */
+    private int numberOfDoors;
+
+    /**
+     * The maximum speed of the vehicle.
+     */
+    private int maxSpeed;
+
+    /**
+     * The current speed of the vehicle.
+     */
+    private int currentSpeed;
 
     /**
      * Creates a new Vehicle instance.
