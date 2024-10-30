@@ -39,7 +39,7 @@ public class Vehicle {
      * @param vehicleNumberOfDoors - The number of doors on the vehicle.
      * @param vehicleMaxSpeed - The maximum speed of the vehicle.
      */
-    public Vehicle(final String vehicleColor, final String vehicleLicensePlate, 
+    public Vehicle(final String vehicleColor, final String vehicleLicensePlate,
                    final int vehicleNumberOfDoors, final int vehicleMaxSpeed) {
         this.color = vehicleColor;
         this.licensePlate = vehicleLicensePlate;
@@ -50,7 +50,7 @@ public class Vehicle {
 
     /**
      * Gets the current speed of the vehicle.
-     * 
+     *
      * @return The current speed of the vehicle.
      */
     public int getCurrentSpeed() {
@@ -59,7 +59,7 @@ public class Vehicle {
 
     /**
      * Gets the color of the vehicle.
-     * 
+     *
      * @return The color of the vehicle.
      */
     public String getColor() {
@@ -68,7 +68,7 @@ public class Vehicle {
 
     /**
      * Sets the color of the vehicle.
-     * 
+     *
      * @param newColor - The new color to set.
      */
     public void setColor(final String newColor) {
@@ -88,7 +88,7 @@ public class Vehicle {
 
     /**
      * Accelerates the vehicle by the given power for a specified time.
-     * 
+     *
      * @param power - The power to apply for acceleration.
      * @param time - The time in seconds to apply the power.
      */
@@ -101,7 +101,7 @@ public class Vehicle {
 
     /**
      * Brakes the vehicle by the given power for a specified time.
-     * 
+     *
      * @param power - The power to apply for braking.
      * @param time - The time in seconds to apply the power.
      */

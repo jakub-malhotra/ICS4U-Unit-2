@@ -26,7 +26,7 @@ final class Main {
     *
     * @param args No args will be used
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // MultipleStringLiterals & MagicNumbers
         final String statusString = "Status:";
         final String newSpeedString = "New speed: ";
