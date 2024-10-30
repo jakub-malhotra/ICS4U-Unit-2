@@ -5,6 +5,7 @@
  * @version 1.0
  * @since   2024-10-29
  */
+
 public class Vehicle {
     /**
     * The color of the vehicle.

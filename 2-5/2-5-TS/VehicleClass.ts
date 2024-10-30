@@ -5,10 +5,36 @@
  * @since   2024-10-29
  */
 export default class Vehicle {
+
+    /**
+     * The color of the vehicle.
+     * @type {string}
+     */
     private color: string;
+
+    /**
+      * The license plate of the vehicle.
+      * @type {string}
+      */
     private licensePlate: string;
+
+    /**
+      * The number of doors on the vehicle.
+      * @type {number}
+      */
     private numberOfDoors: number;
+
+    /**
+      * The maximum speed of the vehicle.
+      * @type {number}
+      */
     private maxSpeed: number;
+
+    /**
+      * The current speed of the vehicle.
+      * @type {number}
+      */
+
     private currentSpeed: number;
 
     /**
