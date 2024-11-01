@@ -1,13 +1,22 @@
+/*
+ * Class representing an airplane with basic functionality.
+ * 
+ * @author  Jakub Malhotra
+ * @version 1.0
+ * @since   2024-10-29
+ */
+
 public class Airplane {
-    /*
-    * The speed of the plane
-    */
+
+    /**
+     * The speed of the airplane.
+     */
     private int speed;
 
     /**
      * Gets the speed of the airplane.
-     * 
-     * @return the speed of the airplane
+     *
+     * @return The current speed of the airplane.
      */
     public int getSpeed() {
         return speed;
@@ -15,11 +24,10 @@ public class Airplane {
 
     /**
      * Sets the speed of the airplane.
-     * 
-     * @param speed the speed to set
+     *
+     * @param speed - The new speed to set for the airplane.
      */
-    public void setSpeed(int speed) {
+    public void setSpeed(final int speed) {
         this.speed = speed;
     }
 }
-
