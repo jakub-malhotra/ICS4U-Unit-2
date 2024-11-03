@@ -28,13 +28,13 @@ export default class Jet extends Airplane {
      * @param {number} speed - The base speed to set, which will be multiplied.
      */
     public set setSpeed(speed: number) {
-        super.setSpeed(speed * Jet.MULTIPLIER);
+        super.setSpeed = speed * Jet.MULTIPLIER;
     }
 
     /**
      * Accelerates the jet by doubling its current speed.
      */
     public accelerate(): void {
-        super.setSpeed(this.getSpeed * Jet.MULTIPLIER);
+        super.setSpeed = this.getSpeed * Jet.MULTIPLIER;
     }
 }
