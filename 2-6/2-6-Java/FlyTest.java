@@ -10,14 +10,24 @@
  * This is the FlyTest program that demonstrates
  * the functionality of the Airplane and Jet classes.
  */
-class FlyTest {
+public class FlyTest {
+    /**
+    * Prevent instantiation
+    * Throw an exception IllegalStateException.
+    * if this ever is called
+    *
+    * @throws IllegalStateException if instantiation is attempted
+    */
+    private FlyTest() {
+        throw new IllegalStateException("Cannot be instantiated");
+    }
 
     /**
      * The main() method to execute the program.
      *
      * @param args No command-line arguments used
      */
-    public static void main( final String[] args) {
+    public static void main(final String[] args) {
         Airplane biplane = new Airplane();
         biplane.setSpeed(212);
         System.out.println(biplane.getSpeed());
