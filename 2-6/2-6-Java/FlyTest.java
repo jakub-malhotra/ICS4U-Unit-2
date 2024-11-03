@@ -10,7 +10,7 @@
  * This is the FlyTest program that demonstrates
  * the functionality of the Airplane and Jet classes.
  */
-public class FlyTest {
+public final class FlyTest {
     /**
     * Prevent instantiation
     * Throw an exception IllegalStateException.
