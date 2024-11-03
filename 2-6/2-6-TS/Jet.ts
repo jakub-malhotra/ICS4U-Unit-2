@@ -6,7 +6,7 @@
  * @since   2024-10-29
  */
 
-import Airplane from './Airplane';
+import Airplane from './Airplane.ts';
 
 export default class Jet extends Airplane {
 
