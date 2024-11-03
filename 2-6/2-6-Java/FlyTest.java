@@ -10,14 +10,14 @@
  * This is the FlyTest program that demonstrates
  * the functionality of the Airplane and Jet classes.
  */
-public class FlyTest {
+class FlyTest {
 
     /**
      * The main() method to execute the program.
      *
      * @param args No command-line arguments used
      */
-    public static void main(String[] args) {
+    public static void main( final String[] args) {
         Airplane biplane = new Airplane();
         biplane.setSpeed(212);
         System.out.println(biplane.getSpeed());
