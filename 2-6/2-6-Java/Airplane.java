@@ -1,6 +1,6 @@
 /*
  * Class representing an airplane with basic functionality.
- * 
+ *
  * @author  Jakub Malhotra
  * @version 1.0
  * @since   2024-10-29

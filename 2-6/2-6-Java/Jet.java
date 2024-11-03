@@ -1,7 +1,7 @@
 /*
  * Class representing a jet with specific speed multiplier functionality.
  * Extends the Airplane class to inherit basic airplane properties.
- * 
+ *
  * @author jakub-malhotra
  * @version 1.0
  * @since   2024-10-29
