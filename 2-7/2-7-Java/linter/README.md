@@ -1,0 +1,1 @@
+# **NOTE: This directory holds the file to Lint your code.**
