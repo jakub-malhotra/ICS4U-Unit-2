@@ -6,9 +6,9 @@
 # @version 1.0
 # @since   2024-11-05
 
-require_relative 'Vehicle'
-require_relative 'Bike'
-require_relative 'Truck'
+require_relative 'vehicle'
+require_relative 'bike'
+require_relative 'truck'
 
 # Creating a new Bike instance
 bmx = Bike.new('Red', 40)
