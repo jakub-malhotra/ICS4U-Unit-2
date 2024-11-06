@@ -15,7 +15,7 @@ console.log('Created Bmx bike.\nStatus:')
 bmx.status()
 
 console.log('\mSet the cadense to 10\n')
-bmx.gear = 5
+bmx.gear = 2
 bmx.cadence = 10
 bmx.status()
 
