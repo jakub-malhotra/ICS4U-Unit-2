@@ -44,6 +44,6 @@ export class Truck extends Vehicle {
      */
     public status(): void {
         super.status();
-        console.log(`License Plate: ${this.licensePlateNumber}`);
+        console.log(`-> License Plate: ${this.licensePlateNumber}`);
     }
 }

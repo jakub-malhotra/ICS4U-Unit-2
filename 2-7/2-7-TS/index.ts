@@ -22,7 +22,7 @@ bmx.status()
 console.log('\nAccelerate by 15:')
 bmx.accelerate(15)
 bmx.status()
-console.log('\n Ringing bell.')
+console.log('\nRinging bell.')
 console.log(bmx.ringBell())
 
 const bigTruck = new Truck('Grey', 200, 'HGC-3456F')

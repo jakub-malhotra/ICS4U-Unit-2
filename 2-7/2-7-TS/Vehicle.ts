@@ -53,12 +53,16 @@ export default class Vehicle {
 
     /**
      * Accelerates the vehicle by a specified power over a given time.
-     * @param {number} accelerationPower - The power level for acceleration.
-     * @param {number} accelerationTime - The time duration for acceleration.
+     * @param {number} power - The power level for acceleration.
+     * @param {number} time - The time duration for acceleration.
      */
-    public accelerate(accelerationPower: number, accelerationTime: number): void {
-        const speedIncrease = accelerationPower * accelerationTime;
-        this.currentSpeed = Math.min(this.currentSpeed + speedIncrease, this.maxSpeed);
+    public accelerate(power: number, time: number): void {
+        const speedIncrease = power * time;
+        if (this.currentSpeed + speedIncrease < this.maxSpeed) {
+            this.currentSpeed += speedIncrease;
+        } else {
+            this.currentSpeed = this.maxSpeed;
+        }
     }
 
     /**
@@ -75,8 +79,8 @@ export default class Vehicle {
      * Displays the status of the vehicle.
      */
     public status(): void {
-        console.log(`Speed: ${this.currentSpeed}`);
-        console.log(`Max Speed: ${this.maxSpeed}`);
-        console.log(`Color: ${this.color}`);
+        console.log(`-> Speed: ${this.currentSpeed}`);
+        console.log(`-> Max Speed: ${this.maxSpeed}`);
+        console.log(`-> Color: ${this.color}`);
     }
 }

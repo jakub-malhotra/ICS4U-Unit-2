@@ -51,6 +51,6 @@ export class Bike extends Vehicle {
      */
     public status(): void {
         super.status();
-        console.log(`Cadence: ${this.cadence}`);
+        console.log(`-> Cadence: ${this.cadence}`);
     }
 }
