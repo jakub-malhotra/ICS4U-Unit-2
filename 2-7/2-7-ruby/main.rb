@@ -17,8 +17,8 @@ puts "Created BMX bike.\nStatus:"
 bmx.status
 
 puts "\nSet the cadence to 10"
-bmx.gear(2)
-bmx.cadence(10)
+bmx.gear_set(2)
+bmx.cadence_set(10)
 bmx.status
 
 puts "\nAccelerate by 15:"
