@@ -67,12 +67,16 @@ export default class Vehicle {
 
     /**
      * Brakes the vehicle by a specified power over a given time.
-     * @param {number} brakePower - The power level for braking.
-     * @param {number} brakeTime - The time duration for braking.
+     * @param {number} power - The power level for braking.
+     * @param {number} time - The time duration for braking.
      */
-    public brake(brakePower: number, brakeTime: number): void {
-        const speedDecrease = brakePower * brakeTime;
-        this.currentSpeed = Math.max(this.currentSpeed - speedDecrease, 0);
+    public brake(power: number, time: number): void {
+        const speedDecrease = power * time;
+        if (this.currentSpeed - speedDecrease > 0) {
+            this.currentSpeed -= speedDecrease;
+        } else {
+            this.currentSpeed = 0;
+        }
     }
 
     /**
