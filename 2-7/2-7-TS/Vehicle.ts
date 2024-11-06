@@ -75,8 +75,8 @@ export default class Vehicle {
      * Displays the status of the vehicle.
      */
     public status(): void {
-        console.log(`Color: ${this.color}`);
+        console.log(`Speed: ${this.currentSpeed}`);
         console.log(`Max Speed: ${this.maxSpeed}`);
-        console.log(`Current Speed: ${this.currentSpeed}`);
+        console.log(`Color: ${this.color}`);
     }
 }

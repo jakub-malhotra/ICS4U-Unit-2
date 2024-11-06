@@ -11,7 +11,7 @@ import { Bike } from "./Bike.ts"
 
 const bmx = new Bike('Red', 40)
 
-console.log('Created Bmx bike.\nStatus:\n')
+console.log('Created Bmx bike.\nStatus:')
 bmx.status()
 
 console.log('Set the cadense to 10\n')
