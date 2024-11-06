@@ -4,6 +4,7 @@
 # @version 1.0
 # @since   2024-11-05
 
+# The Vehicle class which represents a vehicle
 class Vehicle
   # The color of the vehicle.
   # @type [String]

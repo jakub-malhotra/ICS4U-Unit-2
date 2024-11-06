@@ -4,6 +4,7 @@
 # @version 1.0
 # @since   2024-11-05
 
+# The Bike class represents a bike, which is a specific type of vehicle
 class Bike < Vehicle
   # The cadence of the bike.
   # @type [Integer]
