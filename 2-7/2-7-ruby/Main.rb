@@ -25,6 +25,7 @@ bmx.status
 
 puts "\nRinging bell."
 puts bmx.ring_bell
+puts "\n"
 
 # Creating a new Truck instance
 big_truck = Truck.new("Grey", 200, "HGC-3456F")
