@@ -8,13 +8,13 @@ public class Bike extends Vehicle {
 
     /**
      * The cadence of the bike.
-     * @type {number}
+     * @type {int}
      */
     private int cadence = 0;
 
     /**
      * The gear of the bike.
-     * @type {number}
+     * @type {int}
      */
     private int gear = 1;
 
@@ -23,7 +23,7 @@ public class Bike extends Vehicle {
      * @param {String} color - The color of the bike.
      * @param {int} maxSpeed - The maximum speed of the bike.
      */
-    public Bike(String color, int maxSpeed) {
+    public Bike(final String color, final int maxSpeed) {
         super(color, maxSpeed);
     }
 
@@ -31,7 +31,7 @@ public class Bike extends Vehicle {
      * Sets the gear of the bike.
      * @param {int} gear - The gear to set.
      */
-    public void setGear(int gear) {
+    public void setGear(final int gear) {
         this.gear = gear;
     }
 
@@ -39,7 +39,7 @@ public class Bike extends Vehicle {
      * Sets the cadence of the bike.
      * @param {int} cadence - The cadence to set.
      */
-    public void setCadence(int cadence) {
+    public void setCadence(final int cadence) {
         this.cadence = cadence;
     }
 
@@ -47,7 +47,7 @@ public class Bike extends Vehicle {
      * Accelerates the bike based on cadence and gear.
      * @param {int} appliedPower - The power level for acceleration.
      */
-    public void accelerate(int appliedPower) {
+    public void accelerate(final int appliedPower) {
         this.cadence = this.cadence + appliedPower;
         this.currentSpeed = this.currentSpeed + (this.cadence * this.gear);
     }
