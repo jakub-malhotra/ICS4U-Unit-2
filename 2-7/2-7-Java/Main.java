@@ -1,103 +1,49 @@
 /*
-* This is the main code that runs with the Vehicle Class.
-*
-* @author  Mr Coxall
-* @version 1.0
-* @since   20240-01-01
-*/
+ * This program demonstrates the use of the Vehicle, Bike, and Truck classes.
+ *
+ * @author  Mr Coxall
+ * @version 1.0
+ * @since   2024-11-05
+ */
 
-/**
-* This is the Main program.
-*/
-final class Main {
-    /**
-    * Prevent instantiation
-    * Throw an exception IllegalStateException.
-    * if this ever is called
-    *
-    * @throws IllegalStateException if instantiation is attempted
-    */
-    private Main() {
-        throw new IllegalStateException("Cannot be instantiated");
-    }
+public class Main {
 
-    /**
-    * The starting main() function.
-    *
-    * @param args No args will be used
-    */
-    public static void main(final String[] args) {
-        // MultipleStringLiterals & MagicNumbers
-        final String statusString = "Status:";
-        final String newSpeedString = "New speed: ";
-        final String newColorString = "New color: ";
-        final String changingColorString = "Changing color:";
-        final int fourConst = 4;
-        final int twoHundredEightyFourConst = 284;
-        final int tenConst = 10;
-        final int threeHundredTwentyConst = 320;
-        final int oneHundredConst = 100;
-        final int fortyFiveConst = 45;
-        final int fiveConst = 5;
+    public static void main(String[] args) {
 
-        System.out.println("Created Ford focus");
-        final Vehicle fordFocus = new Vehicle("white", "B40-C4RR0",
-            fourConst, twoHundredEightyFourConst);
+        // Creating a new Bike instance
+        Bike bmx = new Bike("Red", 40);
 
-        System.out.println(statusString);
-        fordFocus.status();
+        System.out.println("Created BMX bike.\nStatus:");
+        bmx.status();
 
-        System.out.println("Accelerating, 10 of power for 10 sec.");
-        fordFocus.accelerate(tenConst, tenConst);
-        System.out.println(newSpeedString + fordFocus.getSpeed());
+        System.out.println("\nSet the cadence to 10");
+        bmx.setGear(2);
+        bmx.setCadence(10);
+        bmx.status();
 
-        System.out.println("Changing colour to black:");
-        fordFocus.setColor("black");
-        System.out.println(newColorString + fordFocus.getColor());
+        System.out.println("\nAccelerate by 15:");
+        bmx.accelerate(15);
+        bmx.status();
+        System.out.println("\nRinging bell.");
+        System.out.println(bmx.ringBell());
 
-        System.out.println("");
+        // Creating a new Truck instance
+        Truck bigTruck = new Truck("Grey", 200, "HGC-3456F");
 
-        // New Ferrari
-        System.out.println("Created a Ferrari");
-        final Vehicle ferrari = new Vehicle("red", "VHD-35HU", 2,
-            threeHundredTwentyConst);
+        System.out.println("Created a Truck.\nStatus:");
+        bigTruck.status();
 
-        System.out.println(statusString);
-        ferrari.status();
+        System.out.println("\nAccelerating, 10 of power for ten seconds:");
+        bigTruck.accelerate(10, 10);
+        System.out.println("New speed: " + bigTruck.getSpeed());
 
-        System.out.println("Accelerating, 100 of power for 4 sec.");
-        ferrari.accelerate(oneHundredConst, fourConst);
-        System.out.println(newSpeedString + ferrari.getSpeed());
+        System.out.println("\nBraking, 10 of power for 10 sec.");
+        bigTruck.accelerate(10, 10);
+        System.out.println("New speed: " + bigTruck.getSpeed());
 
-        System.out.println("Breaking, 10 of power for 10 sec.");
-        ferrari.brake(tenConst, tenConst);
-        System.out.println(newSpeedString + ferrari.getSpeed());
-
-        System.out.println(changingColorString);
-        ferrari.setColor("racing red!");
-        System.out.println(newColorString + ferrari.getColor());
-
-        System.out.println("");
-
-        // New Citroen Ami
-        System.out.println("Created a Citroen Ami");
-        final Vehicle citroenAmi = new Vehicle("blue", "FS-695-DQ",
-            fiveConst, fortyFiveConst);
-
-        System.out.println(statusString);
-        citroenAmi.status();
-
-        System.out.println("Accelerating, 5 of power for 10 sec.");
-        citroenAmi.accelerate(fiveConst, tenConst);
-        System.out.println(newSpeedString + citroenAmi.getSpeed());
-
-        System.out.println("Breaking, 2 of power for 10 sec.");
-        citroenAmi.brake(2, tenConst);
-        System.out.println(newSpeedString + citroenAmi.getSpeed());
-
-        System.out.println(changingColorString);
-        citroenAmi.setColor("purple");
-        System.out.println(newColorString + citroenAmi.getColor());
+        System.out.println("\nApplied air pressure of 10:");
+        bigTruck.applyAir(10);
+        System.out.println("New speed: " + bigTruck.getSpeed());
 
         System.out.println("\nDone.");
     }

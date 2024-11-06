@@ -12,13 +12,13 @@ export class Bike extends Vehicle {
      * The cadence of the bike.
      * @type {number}
      */
-    public cadence: number = 0;
+    protected cadence: number = 0;
 
     /**
      * The gear of the bike.
      * @type {number}
      */
-    public gear: number = 1;
+    protected gear: number = 1;
 
     /**
      * Creates a new Bike instance.
@@ -30,12 +30,28 @@ export class Bike extends Vehicle {
     }
 
     /**
-     * Overrides the accelerate method to adjust speed based on cadence and gear.
+     * Sets the gear of the bike.
+     * @param {number} gear - The gear to set.
+     */
+    public setGear(gear: number): void {
+        this.gear = gear;
+    }
+
+    /**
+     * Sets the cadence of the bike.
+     * @param {number} cadence - The cadence to set.
+     */
+    public setCadence(cadence: number): void {
+        this.cadence = cadence;
+    }
+
+    /**
+     * Accelerates the bike based on cadence and gear.
      * @param {number} appliedPower - The power level for acceleration.
      */
     public accelerate(appliedPower: number): void {
         this.cadence = this.cadence + appliedPower;
-        this.currentSpeed = this.currentSpeed + (this.cadence * this.gear)
+        this.currentSpeed = this.currentSpeed + (this.cadence * this.gear);
     }
 
     /**
@@ -52,5 +68,6 @@ export class Bike extends Vehicle {
     public status(): void {
         super.status();
         console.log(`-> Cadence: ${this.cadence}`);
+        console.log(`-> Gear: ${this.gear}`);
     }
 }

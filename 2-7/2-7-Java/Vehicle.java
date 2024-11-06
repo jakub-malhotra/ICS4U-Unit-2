@@ -1,115 +1,97 @@
-/**
+/*
  * Class representing a vehicle with basic functionality.
- *
- * @author  Jakub Malhotra
+ * 
  * @version 1.0
- * @since   2024-10-29
+ * @since   2024-11-05
  */
 
+/**
+ * The Vehicle class represents a vehicle with basic functionality like speed, color,
+ * and the ability to accelerate or brake.
+ */
 public class Vehicle {
-    /**
-    * The color of the vehicle.
-     */
-    private String color;
 
     /**
-     * The license plate of the vehicle.
+     * The color of the vehicle.
      */
-    private String licensePlate;
-
-    /**
-     * The number of doors on the vehicle.
-     */
-    private int numberOfDoors;
+    protected String color;
 
     /**
      * The maximum speed of the vehicle.
      */
-    private int maxSpeed;
+    protected int maxSpeed;
 
     /**
      * The current speed of the vehicle.
      */
-    private int currentSpeed;
+    protected int currentSpeed;
 
     /**
      * Creates a new Vehicle instance.
-     *
-     * @param vehicleColor - The color of the vehicle.
-     * @param vehicleLicensePlate - The license plate of the vehicle.
-     * @param vehicleNumberOfDoors - The number of doors on the vehicle.
-     * @param vehicleMaxSpeed - The maximum speed of the vehicle.
+     * 
+     * @param color     The color of the vehicle.
+     * @param maxSpeed  The maximum speed of the vehicle.
      */
-    public Vehicle(final String vehicleColor, final String vehicleLicensePlate,
-                   final int vehicleNumberOfDoors, final int vehicleMaxSpeed) {
-        this.color = vehicleColor;
-        this.licensePlate = vehicleLicensePlate;
-        this.numberOfDoors = vehicleNumberOfDoors;
-        this.maxSpeed = vehicleMaxSpeed;
+    public Vehicle(String color, int maxSpeed) {
+        this.color = color;
+        this.maxSpeed = maxSpeed;
         this.currentSpeed = 0;
     }
 
     /**
-     * Gets the current speed of the vehicle.
-     *
+     * Returns the current speed of the vehicle.
+     * 
      * @return The current speed of the vehicle.
      */
     public int getSpeed() {
-        return currentSpeed;
+        return this.currentSpeed;
     }
 
     /**
-     * Gets the color of the vehicle.
-     *
-     * @return The color of the vehicle.
+     * Returns the maximum speed of the vehicle.
+     * 
+     * @return The maximum speed of the vehicle.
      */
-    public String getColor() {
-        return color;
+    public int getMaxVehicleSpeed() {
+        return this.maxSpeed;
     }
 
     /**
-     * Sets the color of the vehicle.
-     *
-     * @param newColor - The new color to set.
+     * Accelerates the vehicle by a specified power over a given time.
+     * 
+     * @param power  The power level for acceleration.
+     * @param time   The time duration for acceleration.
      */
-    public void setColor(final String newColor) {
-        this.color = newColor;
+    public void accelerate(int power, int time) {
+        int speedIncrease = power * time;
+        if (this.currentSpeed + speedIncrease < this.maxSpeed) {
+            this.currentSpeed += speedIncrease;
+        } else {
+            this.currentSpeed = this.maxSpeed;
+        }
+    }
+
+    /**
+     * Brakes the vehicle by a specified power over a given time.
+     * 
+     * @param power  The power level for braking.
+     * @param time   The time duration for braking.
+     */
+    public void brake(int power, int time) {
+        int speedDecrease = power * time;
+        if (this.currentSpeed - speedDecrease > 0) {
+            this.currentSpeed -= speedDecrease;
+        } else {
+            this.currentSpeed = 0;
+        }
     }
 
     /**
      * Displays the status of the vehicle.
      */
     public void status() {
-        System.out.println("Color: " + color);
-        System.out.println("License Plate: " + licensePlate);
-        System.out.println("Number of Doors: " + numberOfDoors);
-        System.out.println("Max Speed: " + maxSpeed);
-        System.out.println("Current Speed: " + currentSpeed);
-    }
-
-    /**
-     * Accelerates the vehicle by the given power for a specified time.
-     *
-     * @param power - The power to apply for acceleration.
-     * @param time - The time in seconds to apply the power.
-     */
-    public void accelerate(final int power, final int time) {
-        currentSpeed += power * time;
-        if (currentSpeed > maxSpeed) {
-            currentSpeed = maxSpeed;
-        }
-    }
-
-    /**
-     * Brakes the vehicle by the given power for a specified time.
-     *
-     * @param power - The power to apply for braking.
-     * @param time - The time in seconds to apply the power.
-     */
-    public void brake(final int power, final int time) {
-        currentSpeed -= power * time;
-        if (currentSpeed < 0) {
-            currentSpeed = 0;
-        }
+        System.out.println("-> Speed: " + this.currentSpeed);
+        System.out.println("-> Max Speed: " + this.maxSpeed);
+        System.out.println("-> Color: " + this.color);
     }
 }
