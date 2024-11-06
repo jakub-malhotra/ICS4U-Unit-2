@@ -5,8 +5,6 @@
 # @since   2024-11-05
 
 # The Truck class represents a truck, which is a specific type of vehicle
-# with additional properties such as license plate and doors, and includes
-# functionality to apply air pressure for braking and display its status.
 class Truck < Vehicle
   # The license plate number of the truck.
   # @type [String]

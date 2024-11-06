@@ -24,13 +24,13 @@ class Bike < Vehicle
 
   # Sets the gear of the bike.
   # @param gear [Integer] The gear to set.
-  def set_gear(gear)
+  def gear(gear)
     @gear = gear
   end
 
   # Sets the cadence of the bike.
   # @param cadence [Integer] The cadence to set.
-  def set_cadence(cadence)
+  def cadence(cadence)
     @cadence = cadence
   end
 
