@@ -34,7 +34,7 @@ export class Bike extends Vehicle {
      * @param {number} appliedPower - The power level for acceleration.
      */
     public accelerate(appliedPower: number): void {
-        this.cadence += appliedPower;
+        this.cadence = this.cadence + appliedPower;
         this.currentSpeed = this.currentSpeed + (this.cadence * this.gear)
     }
 
