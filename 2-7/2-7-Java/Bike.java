@@ -63,10 +63,8 @@ public class Bike extends Vehicle {
     /**
      * Displays the status of the bike, including cadence and gear.
      */
-    @Override
     public void status() {
         super.status();
         System.out.println("-> Cadence: " + this.cadence);
-        System.out.println("-> Gear: " + this.gear);
     }
 }
