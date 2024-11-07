@@ -52,6 +52,6 @@ class Bike < Vehicle
   # Displays the status of the bike, including cadence and gear.
   def status
     super()
-    puts "-> Cadence: #{@cadence}, Gear: #{@gear}"
+    puts "-> Cadence: #{nce}, Gear: #{@gear}"
   end
 end
