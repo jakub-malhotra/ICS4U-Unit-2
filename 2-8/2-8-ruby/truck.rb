@@ -18,7 +18,8 @@ class Truck < Vehicle
   # @param color [String] The color of the truck.
   # @param max_speed [Integer] The maximum speed of the truck.
   # @param license_plate_number [String] The license plate number of the truck.
-  def initialize(color, max_speed, license_plate_number)
+  # @param number_of_tires [Integer] The number of tires of the truck.
+  def initialize(color, max_speed, license_plate_number, number_of_tires)
     super(color, max_speed)
     @license_plate_number = license_plate_number
     @doors = 2

@@ -17,8 +17,9 @@ class Bike < Vehicle
   # Creates a new Bike instance.
   # @param color [String] The color of the bike.
   # @param max_speed [Integer] The maximum speed of the bike.
-  def initialize(color, max_speed)
-    super(color, max_speed)
+  # @param number_of_tires [Integer] The number of tires of the bike.
+  def initialize(color, max_speed, number_of_tires)
+    super(color, max_speed, number_of_tires)
     @cadence = 0
     @gear = 1
   end
