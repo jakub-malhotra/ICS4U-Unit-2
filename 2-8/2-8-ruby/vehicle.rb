@@ -46,7 +46,7 @@ class Vehicle
 
   # Returns the number of tires of the vehicle.
   # @return [Integer] The number of tires of the vehicle.
-  def number_of_tires
+  def vehicle_number_of_tires
     @number_of_tires
   end
 
