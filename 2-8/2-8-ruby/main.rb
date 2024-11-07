@@ -11,7 +11,7 @@ require_relative 'bike'
 require_relative 'truck'
 
 # Creating a new Bike instance
-bmx = Bike.new('Red', 40)
+bmx = Bike.new('Red', 40, 2)
 
 puts "Created BMX bike.\nStatus:"
 bmx.status
@@ -30,7 +30,7 @@ puts bmx.ring_bell
 puts "\n"
 
 # Creating a new Truck instance
-big_truck = Truck.new('Grey', 200, 'HGC-3456F')
+big_truck = Truck.new('Grey', 200, 'HGC-3456F', 6)
 
 puts "Created a Truck.\nStatus:"
 big_truck.status

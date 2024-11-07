@@ -18,13 +18,18 @@ class Vehicle
   # @type [Integer]
   attr_reader :current_speed
 
+  # The number of tires of the vehicle.
+  # @type [Integer]
+  attr_reader :number_of_tires
+
   # Creates a new Vehicle instance.
   # @param color [String] The color of the vehicle.
   # @param max_speed [Integer] The maximum speed of the vehicle.
-  def initialize(color, max_speed)
+  def initialize(color, max_speed, number_of_tires)
     @color = color
     @max_speed = max_speed
     @current_speed = 0
+    @number_of_tires = number_of_tires
   end
 
   # Returns the current speed of the vehicle.
@@ -37,6 +42,12 @@ class Vehicle
   # @return [Integer] The maximum speed of the vehicle.
   def max_vehicle_speed
     @max_speed
+  end
+
+  # Returns the number of tires of the vehicle.
+  # @return [Integer] The number of tires of the vehicle.
+  def speed
+    @number_of_tires
   end
 
   # Accelerates the vehicle by a specified power over a given time.
@@ -68,5 +79,6 @@ class Vehicle
     puts "-> Speed: #{@current_speed}"
     puts "-> Max Speed: #{@max_speed}"
     puts "-> Color: #{@color}"
+    puts "-> # of tires: #{@number_of_tires}"
   end
 end
