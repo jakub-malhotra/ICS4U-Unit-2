@@ -37,8 +37,8 @@ export class Truck extends Vehicle {
      * Applies air pressure to slow down the truck.
      * @param {number} airPressure - The amount of air pressure applied.
      */
-    public applyAir(airPressure: number): void {
-        this.currentSpeed = Math.max(0, this.currentSpeed - airPressure / 2);
+    public brake(power: number, time: number, airPressure: number): void {
+        this.currentSpeed = this.currentSpeed - (power * time) - (airPressure * time)
     }
 
     /**
