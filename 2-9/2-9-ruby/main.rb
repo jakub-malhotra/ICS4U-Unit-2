@@ -40,7 +40,7 @@ big_truck.accelerate(10, 10)
 puts "New speed: #{big_truck.speed}"
 
 puts "\nBrake for 3 seconds with a power of 2 and air pressure of 10:"
-big_truck.apply_air(2,3,10)
+big_truck.brake(2,3,10)
 puts "New speed: #{big_truck.speed}"
 
 puts "\nDone."
