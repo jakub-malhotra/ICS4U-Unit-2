@@ -26,7 +26,9 @@ class Truck < Vehicle
   end
 
   # Applies air pressure to slow down the truck.
-  # @param air_pressure [Integer] The amount of air pressure applied.
+  # @param power [Integer] The power level for braking.
+  # @param time [Integer] The time duration for braking.
+  # @param air_pressure [Integer] The air pressure during truck braking.
   def brake(power, time, air_pressure)
     @current_speed = @current_speed - (power * time) - (time * air_pressure)
   end
