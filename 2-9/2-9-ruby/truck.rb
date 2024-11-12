@@ -27,8 +27,8 @@ class Truck < Vehicle
 
   # Applies air pressure to slow down the truck.
   # @param air_pressure [Integer] The amount of air pressure applied.
-  def apply_air(air_pressure)
-    @current_speed = [0, @current_speed - air_pressure / 2].max
+  def brake(power, time, air_pressure)
+    @current_speed = @current_speed - (power * time) - (time * air_pressure)
   end
 
   # Displays the status of the truck, including license plate.

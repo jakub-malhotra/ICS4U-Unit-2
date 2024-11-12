@@ -65,7 +65,8 @@ class Vehicle
   # Brakes the vehicle by a specified power over a given time.
   # @param power [Integer] The power level for braking.
   # @param time [Integer] The time duration for braking.
-  def brake(power, time)
+  # @param air_pressure [Integer] The air pressure during truck braking.
+  def brake(power, time, air_pressure)
     speed_decrease = power * time
     if (@current_speed - speed_decrease).positive?
       @current_speed -= speed_decrease

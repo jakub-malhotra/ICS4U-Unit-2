@@ -85,6 +85,7 @@ export default class Vehicle {
      * Brakes the vehicle by a specified power over a given time.
      * @param {number} power - The power level for braking.
      * @param {number} time - The time duration for braking.
+     * @param {number} airPressure - The air pressure during truck braking.
      */
     public brake(power: number, time: number, airPressure: number): void {
         const speedDecrease = power * time;

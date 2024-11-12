@@ -39,12 +39,8 @@ puts "\nAccelerating, 10 of power for ten seconds:"
 big_truck.accelerate(10, 10)
 puts "New speed: #{big_truck.speed}"
 
-puts "\nBraking, 10 of power for 10 sec."
-big_truck.accelerate(10, 10)
-puts "New speed: #{big_truck.speed}"
-
-puts "\nApplied air pressure of 10:"
-big_truck.apply_air(10)
+puts "\nBrake for 3 seconds with a power of 2 and air pressure of 10:"
+big_truck.apply_air(2,3,10)
 puts "New speed: #{big_truck.speed}"
 
 puts "\nDone."
