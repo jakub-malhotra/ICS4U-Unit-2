@@ -87,7 +87,7 @@ export default class Vehicle {
      * @param {number} time - The time duration for braking.
      * @param {number} airPressure - The air pressure during truck braking.
      */
-    public brake(power: number, time: number, _airPressure: number): void {
+    public brake(power: number, time: number): void {
         const speedDecrease = power * time;
         if (this.currentSpeed - speedDecrease > 0) {
             this.currentSpeed -= speedDecrease;
