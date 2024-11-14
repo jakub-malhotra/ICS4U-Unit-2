@@ -10,6 +10,4 @@ import Vehicle from "./Vehicle.ts"
 
 const vehicle = new Vehicle('Blue', 100, 4)
 
-console.log(`Vehicle status: ${vehicle.status}`)
-
 console.log('\nDone.')
