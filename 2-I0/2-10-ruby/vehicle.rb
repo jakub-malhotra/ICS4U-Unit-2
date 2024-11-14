@@ -5,7 +5,7 @@
 # @since   2024-11-05
 
 # The Vehicle class which represents a vehicle
-class Vehicle
+class abstract Vehicle
   # The color of the vehicle.
   # @type [String]
   attr_reader :color

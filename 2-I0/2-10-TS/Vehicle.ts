@@ -4,7 +4,7 @@
  * @since   2024-11-05
  */
 
-export default class Vehicle {
+export default abstract class Vehicle {
 
     /**
      * The color of the vehicle.
