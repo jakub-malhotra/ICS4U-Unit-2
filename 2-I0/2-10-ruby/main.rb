@@ -11,6 +11,6 @@ require_relative 'bike'
 require_relative 'truck'
 
 # Creating a new Vehicle instance
-vehicle = Vehicle.new('Blue', 100, 4)
+Vehicle.new('Blue', 100, 4)
 
 puts "\nDone."
