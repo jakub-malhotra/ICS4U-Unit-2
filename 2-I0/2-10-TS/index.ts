@@ -8,6 +8,6 @@
 
 import Vehicle from "./Vehicle.ts"
 
-const vehicle = new Vehicle('Blue', 100, 4)
+const _vehicle = new Vehicle('Blue', 100, 4)
 
 console.log('\nDone.')
